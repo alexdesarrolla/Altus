@@ -20072,5 +20072,7 @@ span.select2-selection.select2-selection--single:focus {
     padding-bottom: 70px;
   }
 }
-
+.text-justify{
+  text-align: justify;
+}
 /*# sourceMappingURL=style.css.map */
