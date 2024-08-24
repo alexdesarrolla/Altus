@@ -287,7 +287,7 @@ h6 {
 
 .h1,
 h1 {
-  font-size: 80px;
+  font-size: 60px;
   line-height: 1.167;
 }
 
@@ -9078,7 +9078,7 @@ ul.comment-list > .th-comment-item:last-child  .children .th-comment-item .th-po
 }
 
 .hero-title {
-  line-height: 90px;
+  line-height: 60px;
   margin-bottom: 0;
   color: var(--white-color);
 }
