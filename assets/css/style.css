@@ -9522,7 +9522,7 @@ ul.comment-list > .th-comment-item:last-child  .children .th-comment-item .th-po
 }
 
 .hero-slider-6 .th-hero-slide {
-  padding: 245px 0;
+  height: 70vh;
   position: relative;
 }
 
@@ -20079,4 +20079,8 @@ span.select2-selection.select2-selection--single:focus {
   width: 80% !important;
   max-width: 80% !important;
 }
-/*# sourceMappingURL=style.css.map */
+.container-center{
+  display: flex !important;
+  align-items: center !important;
+  height: 70vh !important;
+}

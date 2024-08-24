@@ -56,9 +56,15 @@
 </head>
 
 <body class="theme-blue">
-    <?php
-    include 'header.php';
-    ?>
+    <div id="header"></div>
+
+<script>
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    });
+</script>
     <!--==============================
 Hero Area
 ==============================-->
@@ -70,7 +76,7 @@ Hero Area
                 <div class="th-hero-bg" data-bg-src="assets/img/hero/plan-de-salud-obama-care.webp">
                     <img src="assets/img/hero/plan-de-salud-obama-care.webp" alt="Hero Image">
                 </div>
-                <div class="container">
+                <div class="container container-center">
                     <div class="hero-style6">
                         <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.7s">PLAN DE SALUD</span>
                         <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.4s">Obama Care</h1>
@@ -85,14 +91,13 @@ Hero Area
                 </div>
             </div>
 
-
             <div class="th-hero-slide">
-                <div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_5_3.png">
-                    <img src="assets/img/update1/hero/hero_overlay_6.png" alt="Hero Image">
+                <div class="th-hero-bg" data-bg-src="assets/img/hero/rápida-y-eficiente.webp">
+                    <img src="assets/img/hero/rápida-y-eficiente.webp" alt="Hero Image">
                 </div>
-                <div class="container">
+                <div class="container container-center">
                     <div class="hero-style6">
-                        <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.7s">Plan de salud</span>
+                        <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.7s">PLAN DE SALUD</span>
                         <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.4s">Tu y tu familia son los más importante</h1>
                         <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.1s">Protegelos</h1>
                         <div class="checklist" data-ani="slideinup" data-ani-delay="0.1s">
@@ -100,30 +105,6 @@ Hero Area
                         <div class="btn-group" data-ani="slideinup" data-ani-delay="0.5s">
                             <a href="about.html" class="th-btn style3">Escríbenos ya<i class="fas fa-long-arrow-right ms-2"></i></a>
                             <a href="service.html" class="th-btn style6">Hablar con un asesor<i class="fas fa-long-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="th-hero-slide">
-                <div class="th-hero-bg" data-bg-src="assets/img/hero/hero_bg_5_4.png">
-                    <img src="assets/img/update1/hero/hero_overlay_6.png" alt="Hero Image">
-                </div>
-                <div class="container">
-                    <div class="hero-style6">
-                        <span class="hero-subtitle" data-ani="slideindown" data-ani-delay="0.7s">Turning Lifes Uncertainties</span>
-                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.4s">We Provide Home</h1>
-                        <h1 class="hero-title" data-ani="slideindown" data-ani-delay="0.1s">Insurance For You</h1>
-                        <div class="checklist" data-ani="slideinup" data-ani-delay="0.1s">
-                            <ul>
-                                <li>Experts Advisors</li>
-                                <li>538+ Insurance</li>
-                            </ul>
-                        </div>
-                        <div class="btn-group" data-ani="slideinup" data-ani-delay="0.5s">
-                            <a href="about.html" class="th-btn style3">Get Started<i class="fas fa-long-arrow-right ms-2"></i></a>
-                            <a href="service.html" class="th-btn style6">Our Services<i class="fas fa-long-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -213,7 +194,7 @@ About Area
                             </div>
                         </div>
                         <div class="img1">
-                            <img class="tilt-active" src="assets/img/normal/about_5-1.png" alt="About">
+                            <img class="tilt-active" src="assets/img/hero/proteccion-confiable-para-la-vida.webp" alt="About">
                         </div>
                     </div>
                 </div>
@@ -526,46 +507,20 @@ Testimonial Area
                                 </div>
                             </div>
                         </div>
-
-                        <div class="testi-box5">
-                            <div class="testi-box_wrap">
-                                <div class="testi-box_avater">
-                                    <div class="thumb">
-                                        <img src="assets/img/testimonial/testi_4_1.png" alt="testimonial">
-                                    </div>
-                                </div>
-                                <div class="testi-box_content">
-                                    <h4 class="testi-box_title h6">
-                                        “Better Services” <span class="review-rating">
-                                            <span>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </span> </span>
-                                    </h4>
-                                    <p class="testi-box_text">Insurance websites should provide clear and concise information about their products, coverage options, and pricing.</p>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <h3 class="testi-box_name h6">Dianne Russell</h3>
-                                            <span class="testi-box_desig">Web Developer</span>
-                                        </div>
-                                        <div class="media-body">
-                                            <i class="fa fa-quote-right"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <?php
-    include 'footer.php';
-    ?>
+    <div id="footer"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
 
     <!--********************************
 			Code End  Here 
