@@ -16522,7 +16522,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .feature-wrapper.style2 .feature-wrap_text {
   margin-bottom: -0.5em;
-  max-width: 378px;
+  max-width: 878px;
 }
 
 .feature-slider-wrap {
@@ -17816,7 +17816,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .service-card_content {
   background: var(--white-color);
-  margin: -123px 30px 0 30px;
+  margin: -20px 30px 0 30px;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.08);
   position: relative;
   padding: 0 40px 30px 40px;
