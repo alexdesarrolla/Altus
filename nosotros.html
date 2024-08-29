@@ -7,9 +7,9 @@
     <title>Altus Seguros - Quiénes Somos | Seguros de Salud y Vida</title>
     <meta name="author" content="Altus Seguros">
     <meta name="description"
-        content="Descubre quiénes somos en Altus Seguros. Nos especializamos en seguros de salud, vida, Medicaid, Medicare y planes suplementarios. Protegemos lo que más valoras.">
+        content="Descubre quiénes somos en Altus Seguros. Nos especializamos en seguros de salud, vida, Medicaid, Medicare y planes Complementarios. Protegemos lo que más valoras.">
     <meta name="keywords"
-        content="Altus Seguros, seguros de salud, seguros de vida, Medicaid, Medicare, planes de salud, seguros suplementarios">
+        content="Altus Seguros, seguros de salud, seguros de vida, Medicaid, Medicare, planes de salud, seguros Complementarios">
     <meta name="robots" content="index, follow">
 
 
@@ -53,17 +53,27 @@
     <body class="theme-blue">
         <div id="header"></div>
 
-        <script>
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                });
-        </script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#header").load("header.html", function() {
+            // Aquí puedes inicializar el menú después de cargar el header
+            $('.th-menu-toggle').on('click', function() {
+                $('.th-menu-wrapper').toggleClass('active');
+            });
+
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('.th-menu-wrapper, .th-menu-toggle').length) {
+                    $('.th-menu-wrapper').removeClass('active');
+                }
+            });
+        });
+    });
+</script>
         <!--==============================
     Breadcumb
 ============================== -->
-        <div class="breadcumb-wrapper " style="padding: 150px 150px !important;"
+        <div class="breadcumb-wrapper "
             data-bg-src="assets/img/breadcumb/banner-nosotros.webp" data-overlay="black" data-opacity="8">
             <div class="container">
                 <div class="breadcumb-content">
@@ -152,7 +162,7 @@ Feature Area-2
                                     adecuado. Nuestro equipo de profesionales está aquí para guiarte en cada paso del
                                     proceso, asegurando que tomes decisiones informadas que se ajusten a tus
                                     necesidades. Nos especializamos en planes de salud, seguros de vida, Medicaid,
-                                    Medicare y planes suplementarios, siempre brindándote atención en tu idioma.</p>
+                                    Medicare y planes Complementarios, siempre brindándote atención en tu idioma.</p>
                                 <div class="feature-circle-wrap">
                                     <div class="feature-circle">
                                         <div class="progressbar">
@@ -207,7 +217,7 @@ Cta Area
                         <div class="cta-contact-wrap text-center">
                             <h6 class="subtitle">Llámanos en caso de emergencia</h6>
                             <h3 class="title"><a href="tel:+18008158016">+1 800-815-8016</a></h3>
-                            <a href="contact.html" class="th-btn">Solicita una Cotización<i
+                            <a href="https://api.whatsapp.com/send/?phone=18008158016" target="_blank" class="th-btn">Solicita una Cotización<i
                                     class="far fa-arrow-right"></i></a>
                         </div>
                     </div>

@@ -49,17 +49,27 @@
 <body>
     <div id="header"></div>
 
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#header").load("header.html", function() {
+            // Aquí puedes inicializar el menú después de cargar el header
+            $('.th-menu-toggle').on('click', function() {
+                $('.th-menu-wrapper').toggleClass('active');
             });
-    </script>
+
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('.th-menu-wrapper, .th-menu-toggle').length) {
+                    $('.th-menu-wrapper').removeClass('active');
+                }
+            });
+        });
+    });
+</script>
     <!--==============================
     Breadcumb
 ============================== -->
-    <div class="breadcumb-wrapper" style="padding: 150px 150px !important;" data-bg-src="assets/img/breadcumb/banner-obamacare.webp" data-overlay="black"
+    <div class="breadcumb-wrapper" data-bg-src="assets/img/breadcumb/banner-obamacare.webp" data-overlay="black"
         data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
@@ -114,7 +124,7 @@
                                     <li><a href="seguro-de-vida.html">Seguro de Vida</a></li>
                                     <li><a href="medicare.html">Medicare</a></li>
                                     <li><a href="seguros-privados.html">Seguros Privados</a></li>
-                                    <li><a href="seguros-complementarios.html">Seguros Suplementarios</a></li>
+                                    <li><a href="seguros-complementarios.html">Seguros Complementarios</a></li>
 
                                 </ul>
                             </div>

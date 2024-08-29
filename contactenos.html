@@ -44,19 +44,29 @@
 </head>
 
 <body>
-<div id="header"></div>
+    <div id="header"></div>
 
-<script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
-    });
-</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#header").load("header.html", function() {
+                // Aquí puedes inicializar el menú después de cargar el header
+                $('.th-menu-toggle').on('click', function() {
+                    $('.th-menu-wrapper').toggleClass('active');
+                });
+    
+                $(document).on('click', function(event) {
+                    if (!$(event.target).closest('.th-menu-wrapper, .th-menu-toggle').length) {
+                        $('.th-menu-wrapper').removeClass('active');
+                    }
+                });
+            });
+        });
+    </script>
     <!--==============================
     Breadcumb
 ============================== -->
-    <div class="breadcumb-wrapper " style="padding: 150px 150px !important;" data-bg-src="assets/img/breadcumb/contactanos-altus.webp" data-overlay="black" data-opacity="8">
+    <div class="breadcumb-wrapper" data-bg-src="assets/img/breadcumb/contactanos-altus.webp" data-overlay="black" data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Contáctanos</h1>

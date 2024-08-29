@@ -7,7 +7,7 @@
     <title>Altus Asistencia Latina USA - Seguros de Salud y Vida en Estados Unidos</title>
     <meta name="author" content="Altus Seguros">
     <meta name="description"
-        content="En Altus Asistencia Latina USA, ofrecemos seguros de salud, vida, Medicaid, Medicare y planes suplementarios en Estados Unidos. Protegemos a tu familia y tus bienes más preciados.">
+        content="En Altus Asistencia Latina USA, ofrecemos seguros de salud, vida, Medicaid, Medicare y planes Complementarios en Estados Unidos. Protegemos a tu familia y tus bienes más preciados.">
     <meta name="keywords"
         content="Altus Seguros, seguros de salud USA, seguros de vida, Medicaid, Medicare, planes de salud, seguros en Estados Unidos">
     <meta name="robots" content="index, follow">
@@ -51,13 +51,24 @@
 <body class="theme-blue">
     <div id="header"></div>
 
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#header").load("header.html", function() {
+            // Aquí puedes inicializar el menú después de cargar el header
+            $('.th-menu-toggle').on('click', function() {
+                $('.th-menu-wrapper').toggleClass('active');
             });
-    </script>
+
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('.th-menu-wrapper, .th-menu-toggle').length) {
+                    $('.th-menu-wrapper').removeClass('active');
+                }
+            });
+        });
+    });
+</script>
+
     <!--==============================
 Hero Area
 ==============================-->
@@ -68,7 +79,6 @@ Hero Area
 
             <div class="th-hero-slide">
                 <div class="th-hero-bg" data-bg-src="assets/img/hero/plan-de-salud-obama-care.webp">
-                    <img src="assets/img/hero/plan-de-salud-obama-care.webp" alt="Hero Image">
                 </div>
                 <div class="container container-center">
                     <div class="hero-style6">
@@ -89,7 +99,6 @@ Hero Area
 
             <div class="th-hero-slide">
                 <div class="th-hero-bg" data-bg-src="assets/img/hero/rápida-y-eficiente.webp">
-                    <img src="assets/img/hero/rápida-y-eficiente.webp" alt="Hero Image">
                 </div>
                 <div class="container container-center">
                     <div class="hero-style6">
@@ -212,7 +221,7 @@ About Area
                     <p class="mt-n1 mb-30">Somos una compañía conformada por un equipo de profesionales especializados
                         en el área de seguros (salud y vida). Trabajamos con el único interés de educar, incentivar,
                         concientizar y ayudar a nuestra comunidad en el proceso de inscripción y renovación del plan de
-                        salud adecuado, Seguros de Vida, Medicaid, Medicare y planes suplementarios de salud.</p>
+                        salud adecuado, Seguros de Vida, Medicaid, Medicare y planes Complementarios de salud.</p>
                     <div class="row justify-content-between">
                         <div class="col-xxl-8 col-xl-9 col-lg-6 col-sm-7 order-sm-1">
                             <div class="checklist mb-50">
@@ -251,10 +260,10 @@ Servce Area
                             </div>
                         </div>
                         <div class="service-box_content">
-                            <h3 class="service-box_title h4"><a href="#">Obama Care</a></h3>
+                            <h3 class="service-box_title h4"><a href="obamacare.html">Obama Care</a></h3>
                             <p class="service-box_text">Accede a cobertura de salud asequible con opciones adaptadas a
                                 tus necesidades.</p>
-                            <a class="icon-btn-with-text" href="#"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="obamacare.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -268,10 +277,10 @@ Servce Area
                             </div>
                         </div>
                         <div class="service-box_content">
-                            <h3 class="service-box_title h4"><a href="#">Seguro de Vida</a></h3>
+                            <h3 class="service-box_title h4"><a href="seguro-de-vida.html">Seguro de Vida</a></h3>
                             <p class="service-box_text">Protege a tus seres queridos asegurando su bienestar financiero
                                 en cualquier circunstancia.</p>
-                            <a class="icon-btn-with-text" href="#"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="seguro-de-vida.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -285,10 +294,10 @@ Servce Area
                             </div>
                         </div>
                         <div class="service-box_content">
-                            <h3 class="service-box_title h4"><a href="#">Medicare</a></h3>
+                            <h3 class="service-box_title h4"><a href="medicare.html">Medicare</a></h3>
                             <p class="service-box_text">Plan de salud para mayores de 65 años y personas con ciertas
                                 discapacidades.</p>
-                            <a class="icon-btn-with-text" href="#"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="medicare.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -302,10 +311,10 @@ Servce Area
                             </div>
                         </div>
                         <div class="service-box_content">
-                            <h3 class="service-box_title h4"><a href="#">Seguros Privados</a></h3>
+                            <h3 class="service-box_title h4"><a href="seguros-privados.html">Seguros Privados</a></h3>
                             <p class="service-box_text">Personaliza tu cobertura de salud con opciones exclusivas para
                                 ti y tu familia.</p>
-                            <a class="icon-btn-with-text" href="#"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="seguros-privados.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -313,16 +322,16 @@ Servce Area
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="service-box style3">
                         <div class="service-box_thumb">
-                            <img src="assets/img/service/suplementarios.webp" alt="img">
+                            <img src="assets/img/service/complementarios.webp" alt="img">
                             <div class="service-box_icon">
                                 <img src="assets/img/icon/service_icon_6_5.svg" alt="Icon">
                             </div>
                         </div>
                         <div class="service-box_content">
-                            <h3 class="service-box_title h4"><a href="#">Seguros Suplementarios</a></h3>
+                            <h3 class="service-box_title h4"><a href="seguros-complementarios.html">Seguros Complementarios</a></h3>
                             <p class="service-box_text">Completa tu protección con seguros que cubren gastos adicionales
                                 no contemplados.</p>
-                            <a class="icon-btn-with-text" href="#"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="seguros-complementarios.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -333,22 +342,22 @@ Servce Area
     <!--==============================
 Cta Area  
 ==============================-->
-    <section class="cta-sec7" data-bg-src="assets/img/bg/cta_bg_6.png">
-        <div class="cta-thumb7 shape-mockup d-lg-block d-none" data-top="0" data-left="0"><img
-                src="assets/img/hero/donde-la-protección-se-une-a-la-comodidad.webp" alt="img"></div>
-        <div class="container">
-            <div class="row justify-content-end align-items-center">
-                <div class="col-lg-5 col-md-8">
-                    <div class="title-area mb-0">
-                        <h2 class="cta-title h3 text-white">Donde la protección se une a la comodidad</h2>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mt-4 mt-md-0 text-md-end">
-                    <a href="#" class="th-btn style3">Contáctanos <i class="far fa-arrow-right"></i></a>
+    <div class="container-fluid bg-dark text-white banner-height" data-bg-src="assets/img/bg/cta_bg_6.png">
+        <div class="row justify-content-center align-items-center h-100">
+            <div class=" text-center">
+                <h2 class="mb-3 cta-title h3 text-white">¡Descarga nuestra App Móvil!</h2>
+                <p class="mb-4 text-white"">Disponible ahora en Google Play y en el App Store.</p>
+                <div class="d-flex justify-content-center">
+                    <a href="https://play.google.com/store/apps/details?id=mnm.altusaslv2.app&pcampaignid=web_share" target="_blank" class="me-3">
+                        <img src="assets/img/normal/google-play.webp" alt="Google Play" class="store-button">
+                    </a>
+                    <a href="">
+                        <img src="assets/img/normal/apple-store.webp" alt="App Store" class="store-button">
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!--==============================
 Brand Area  
 ==============================-->
@@ -477,7 +486,7 @@ Testimonial Area
                                                 <i class="far fa-star"></i>
                                             </span> </span>
                                     </h4>
-                                    <p class="testi-box_text">Gracias a los seguros suplementarios, no tuve que
+                                    <p class="testi-box_text">Gracias a los seguros Complementarios, no tuve que
                                         preocuparme por gastos imprevistos durante mi tratamiento. Recomiendo sus
                                         servicios a todos.</p>
                                     <div class="media">

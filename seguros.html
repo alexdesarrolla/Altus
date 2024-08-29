@@ -6,8 +6,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Seguros - Altus | Salud, Vida, Medicare y Más</title>
     <meta name="author" content="Altus Seguros">
-    <meta name="description" content="Conoce los servicios de seguros que Altus ofrece, incluyendo seguros de salud, vida, Medicaid, Medicare, y planes suplementarios. Protegemos lo que más valoras.">
-    <meta name="keywords" content="Altus Seguros, servicios de seguros, seguros de salud, seguros de vida, Medicaid, Medicare, planes suplementarios">
+    <meta name="description" content="Conoce los servicios de seguros que Altus ofrece, incluyendo seguros de salud, vida, Medicaid, Medicare, y planes Complementarios. Protegemos lo que más valoras.">
+    <meta name="keywords" content="Altus Seguros, servicios de seguros, seguros de salud, seguros de vida, Medicaid, Medicare, planes Complementarios">
     <meta name="robots" content="index, follow">    
 
     <!-- Mobile Specific Metas -->
@@ -46,17 +46,27 @@
 <body>
     <div id="header"></div>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('header').innerHTML = data;
+    $(document).ready(function(){
+        $("#header").load("header.html", function() {
+            // Aquí puedes inicializar el menú después de cargar el header
+            $('.th-menu-toggle').on('click', function() {
+                $('.th-menu-wrapper').toggleClass('active');
+            });
+
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('.th-menu-wrapper, .th-menu-toggle').length) {
+                    $('.th-menu-wrapper').removeClass('active');
+                }
+            });
+        });
     });
 </script>
     <!--==============================
     Breadcumb
 ============================== -->
-    <div class="breadcumb-wrapper" style="padding: 150px 150px !important;" data-bg-src="assets/img/breadcumb/servicios-seguros-medicos-altos.webp" data-overlay="black" data-opacity="8">
+    <div class="breadcumb-wrapper" data-bg-src="assets/img/breadcumb/servicios-seguros-medicos-altos.webp" data-overlay="black" data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Seguros</h1>
@@ -86,9 +96,9 @@ Servce Area
                             <div class="service-icon">
                                 <img src="assets/img/icon/service_icon_1_1.svg" alt="Icon">
                             </div>
-                            <h3 class="service-title box-title h4"><a href="service-details.html">Obama Care</a></h3>
+                            <h3 class="service-title box-title h4"><a href="obamacare.html">Obama Care</a></h3>
                             <p class="service-card_text">Te ayudamos a inscribirte en el plan de salud más adecuado para ti bajo la ley de cuidado de salud a bajo costo.</p>
-                            <a href="service-details.html" class="half-line-btn">Ver más</a>
+                            <a href="obamacare.html" class="half-line-btn">Ver más</a>
                         </div>
                     </div>
                 </div>
@@ -101,9 +111,9 @@ Servce Area
                             <div class="service-icon">
                                 <img src="assets/img/icon/service_icon_1_4.svg" alt="Icon">
                             </div>
-                            <h3 class="service-title box-title h4"><a href="service-details.html">Seguro de Vida</a></h3>
+                            <h3 class="service-title box-title h4"><a href="seguro-de-vida.html">Seguro de Vida</a></h3>
                             <p class="service-card_text">Protege el futuro de tus seres queridos con nuestras opciones de seguros de vida, diseñadas para brindar tranquilidad.</p>
-                            <a href="service-details.html" class="half-line-btn">Ver más</a>
+                            <a href="seguro-de-vida.html" class="half-line-btn">Ver más</a>
                         </div>
                     </div>
                 </div>
@@ -116,9 +126,9 @@ Servce Area
                             <div class="service-icon">
                                 <img src="assets/img/icon/service_icon_1_5.svg" alt="Icon">
                             </div>
-                            <h3 class="service-title box-title h4"><a href="service-details.html">Medicare</a></h3>
+                            <h3 class="service-title box-title h4"><a href="medicare.html">Medicare</a></h3>
                             <p class="service-card_text">Recibe la atención médica que necesitas a través de nuestros planes de Medicare, adaptados a cada una de tus necesidades.</p>
-                            <a href="service-details.html" class="half-line-btn">Ver más</a>
+                            <a href="medicare.html" class="half-line-btn">Ver más</a>
                         </div>
                     </div>
                 </div>
@@ -131,9 +141,9 @@ Servce Area
                             <div class="service-icon">
                                 <img src="assets/img/icon/service_icon_1_2.svg" alt="Icon">
                             </div>
-                            <h3 class="service-title box-title h4"><a href="service-details.html">Seguros Privados</a></h3>
+                            <h3 class="service-title box-title h4"><a href="seguros-privados.html">Seguros Privados</a></h3>
                             <p class="service-card_text">Explora nuestras opciones de seguros privados, diseñadas para ofrecerte la mejor cobertura en cada situación.</p>
-                            <a href="service-details.html" class="half-line-btn">Ver más</a>
+                            <a href="seguros-privados.html" class="half-line-btn">Ver más</a>
                         </div>
                     </div>
                 </div>
@@ -146,9 +156,9 @@ Servce Area
                             <div class="service-icon">
                                 <img src="assets/img/icon/service_icon_1_3.svg" alt="Icon">
                             </div>
-                            <h3 class="service-title box-title h4"><a href="service-details.html">Seguros Suplementarios</a></h3>
-                            <p class="service-card_text">Asegúrate de estar completamente cubierto con nuestros seguros suplementarios, complementando tu plan principal de protección.</p>
-                            <a href="service-details.html" class="half-line-btn">Read More</a>
+                            <h3 class="service-title box-title h4"><a href="seguros-complementarios.html">Seguros Complementarios</a></h3>
+                            <p class="service-card_text">Asegúrate de estar completamente cubierto con nuestros seguros Complementarios, complementando tu plan principal de protección.</p>
+                            <a href="seguros-complementarios.html" class="half-line-btn">Read More</a>
                         </div>
                     </div>
                 </div>

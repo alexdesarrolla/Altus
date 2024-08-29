@@ -2014,7 +2014,7 @@ textarea.is-invalid {
   padding-top: 40px;
   display: block;
   text-align: center;
-  background-color: var(--title-color);
+  background-color: white;
 }
 
 .th-menu-wrapper .mobile-logo svg {
@@ -8044,7 +8044,7 @@ ol.wp-block-rss {
 
 .breadcumb-wrapper {
   background-color: var(--title-color);
-  padding: calc(110px + 150px) 0 150px;
+  padding: 150px 150px;
   overflow: hidden;
   text-align: center;
   background-color: #D9D9D9;
@@ -8072,14 +8072,14 @@ ol.wp-block-rss {
 /* Medium devices */
 @media (max-width: 991px) {
   .breadcumb-wrapper {
-    padding: calc(80px + 120px) 0 120px;
+    padding: 65px 65px;
   }
 }
 
 /* Small devices */
 @media (max-width: 767px) {
   .breadcumb-wrapper {
-    padding: calc(80px + 100px) 0 100px;
+    padding: 65px 65px;
   }
   .breadcumb-title {
     font-size: 50px;
@@ -9646,7 +9646,7 @@ ul.comment-list > .th-comment-item:last-child  .children .th-comment-item .th-po
 /* Extra small devices */
 @media (max-width: 575px) {
   .hero-slider-6 .th-hero-slide {
-    padding: 90px 0;
+    padding: 0px;
   }
   .hero-style6 .hero-title {
     font-size: 38px;
@@ -14928,6 +14928,8 @@ span.select2-selection.select2-selection--single:focus {
 
 .team-card .team-img img {
   width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
 }
 
 .team-card .team-title {
@@ -20083,4 +20085,72 @@ span.select2-selection.select2-selection--single:focus {
   display: flex !important;
   align-items: center !important;
   height: 70vh !important;
+}
+.th-hero-slide {
+  position: relative;
+}
+
+.th-hero-slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 por la opacidad que prefieras */
+  z-index: 1;
+}
+
+.th-hero-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-style6 {
+  position: relative;
+  z-index: 2;
+  color: #fff; /* Para asegurar que el texto sea visible sobre el fondo oscuro */
+}
+.banner-height {
+  height: 400px; /* Altura de 400 px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-button {
+  max-width: 200px; /* Ajusta el tamaño según necesites */
+  height: auto;
+  border-radius: 10px; /* Opción para bordes redondeados */
+}
+
+.bg-dark {
+  background-color: #000; /* Fondo oscuro */
+}
+
+@media (max-width: 768px) {
+  .store-button {
+      max-width: 150px;
+  }
+  .logomovilaltus{
+    max-width: 80% !important;
+  }
+}
+.whatsapp {
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:20px;
+  left:20px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  z-index:100;
+}
+
+.whatsapp-icon {
+  margin-top:13px;
 }
