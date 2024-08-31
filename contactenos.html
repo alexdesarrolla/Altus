@@ -81,6 +81,57 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="termsModalLabel">Términos y Condiciones</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h3 class="h4">Artículo 1 - Alcance general y objeto del acuerdo</h3>
+              <p>
+                  Los siguientes términos y condiciones (T&C) rigen la relación entre usted como cliente y nuestra empresa al interactuar a través de nuestro sitio web <a href="https://altus.movilapp.net">https://altus.movilapp.net</a> y/o en nuestra aplicación ALTUS.
+              </p>
+              <!-- Aquí puedes insertar más contenido de los T&C -->
+              <hr>
+              <h3 class="h4">Política de Datos de Usuario</h3>
+              <p>
+                  Nuestra política de datos establece cómo manejamos y protegemos la información personal que nos proporciona. Por favor, lea detenidamente antes de aceptar.
+              </p>
+              <!-- Aquí puedes insertar más contenido de la Política de Datos -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Rechazar</button>
+              <button type="button" class="btn btn-primary" id="acceptTerms">Aceptar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bootstrap JS and dependencies -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  
+      <!-- Script para mostrar el modal al cargar la página -->
+      <script>
+          document.addEventListener('DOMContentLoaded', function () {
+              if (!localStorage.getItem('termsAccepted')) {
+                  var termsModal = new bootstrap.Modal(document.getElementById('termsModal'), {
+                      backdrop: 'static',
+                      keyboard: false
+                  });
+                  termsModal.show();
+  
+                  document.getElementById('acceptTerms').addEventListener('click', function() {
+                      localStorage.setItem('termsAccepted', 'true');
+                      termsModal.hide();
+                  });
+              }
+          });
+      </script>
     <!--==============================
 Contact Area  
 ==============================-->
