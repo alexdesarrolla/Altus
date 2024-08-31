@@ -8072,14 +8072,14 @@ ol.wp-block-rss {
 /* Medium devices */
 @media (max-width: 991px) {
   .breadcumb-wrapper {
-    padding: 65px 65px;
+    padding: 65px 15px;
   }
 }
 
 /* Small devices */
 @media (max-width: 767px) {
   .breadcumb-wrapper {
-    padding: 65px 65px;
+    padding: 65px 15px;
   }
   .breadcumb-title {
     font-size: 50px;
@@ -20168,4 +20168,17 @@ span.select2-selection.select2-selection--single:focus {
 
 .modal-content {
   margin: auto; /* Centrar el contenido */
+}
+.t-12{
+  font-size: 12px;
+  text-align: justify;
+}
+.h4-lh0 {
+  font-size: 20px;
+  margin-top: 15px;
+  line-height: 0;
+}
+.h5-lh0 {
+  line-height: 1;
+  margin-bottom: 5px;
 }
