@@ -94,6 +94,7 @@ Contact Area
                                 <h4 class="contact-info_title h6">Teléfono</h4>
                                 <span class="contact-info_text">
                                     <a href="tel:+18008158016">+1 800-815-8016</a>
+                                    <a href="tel:+18332060777">+1 833-206-0777</a>
                                 </span>
                             </div>
                         </div>
@@ -121,47 +122,57 @@ Contact Area
                         </div>
                         <h6 class="social-info_title">Síguenos</h6>
                         <div class="th-social style-white">
-                            <a href="https://www.facebook.com/ASISTENCIALATINAEU"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/altus.asistencialatina/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/ASISTENCIALATINAEU" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/altus.asistencialatina/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://x.com/latinausa_a" target="_blank"><i class="fa-brands fa-x"></i></a>
+                            <a href="https://t.me/Altushealth" target="_blank"><i class="fa-brands fa-telegram"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-8">
-                    <form action="mail.php" method="POST" class="contact-form3 ajax-contact h-100">
+                    <form action="https://formspree.io/f/xgvwdbjr" method="POST" class="contact-form3 ajax-contact h-100">
                         <h2 class="form-title h3 mb-30">Escríbenos un mensaje</h2>
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control style-white" name="nombre" id="name" placeholder="Nombre" required>
+                                <input type="text" class="form-control style-white" name="Nombre" id="name" placeholder="Nombre" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="email" class="form-control style-white" name="email" id="email" placeholder="Correo" required>
+                                <input type="email" class="form-control style-white" name="Correo" id="email" placeholder="Correo" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <input type="tel" class="form-control style-white" name="telefono" id="number" placeholder="Teléfono" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <select name="tipoSeg" id="subject" class="form-select style-white" required>
+                                <select name="Tipo de Seguro" id="subject" class="form-select style-white" required>
                                     <option value="" disabled selected hidden>Selecciona un seguro</option>
                                     <option value="Obama Care">Obama Care</option>
                                     <option value="Seguro de vida">Seguro de vida</option>
                                     <option value="Medicare">Medicare</option>
                                     <option value="Seguros privados">Seguros privados</option>
-                                    <option value="Seguros complementarios">Seguros complementarios</option>
+                                    <option value="Seguros Comerciales">Seguros Comerciales</option>
                                 </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control style-white" name="ZipCode" id="zipcode" placeholder="Código Postal" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="date" class="form-control style-white" name="Fecha de nacimiento" id="birthdate" placeholder="Fecha de nacimiento" required>
                             </div>
                             <div class="form-group col-12">
                                 <textarea name="message" id="message" cols="30" rows="3" class="form-control style-white" placeholder="Tu mensaje" required></textarea>
                             </div>
                             <div class="form-group col-12">
                                 <input type="checkbox" id="smsAlerts" name="smsAlerts" required>
-                                <label for="smsAlerts">Me gustaría recibir alertas de texto (SMS) y actualizaciones de Health Insurance Store.</label>
-                            </div>                            
+                                <label for="smsAlerts">Me gustaría recibir alertas de texto (SMS) y actualizaciones de ALTUS Insurance.</label>
+                            </div> 
                             <div class="form-btn col-12">
                                 <button class="th-btn" type="submit">Envíar <i class="fa fa-arrow-right"></i></button>
                             </div>
+                            
                         </div>
                         <p class="form-messages mb-0 mt-3"></p>
                     </form>
+                    
                     
                     
                 </div>
@@ -169,7 +180,7 @@ Contact Area
         </div>
     </div>
     <div class="map-sec">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7022.994006533637!2d-81.364872!3d28.34382!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd8648fe4da541%3A0xe46ef630516a799a!2s1970%20E%20Osceola%20Pkwy%2C%20Kissimmee%2C%20FL%2034743%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sco!4v1724731610225!5m2!1ses-419!2sco" allowfullscreen="" loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d877.6369105421163!2d-81.2791509604381!3d28.372522775251312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88dd8923ec57832f%3A0x47bce6ef4ddce065!2s6900%20Tavistock%20Lakes%20Blvd%2C%20Orlando%2C%20FL%2032827%2C%20EE.%20UU.!5e0!3m2!1ses!2sco!4v1725069122428!5m2!1ses!2sco" allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div id="footer"></div>
 
@@ -180,15 +191,6 @@ Contact Area
       document.getElementById('footer').innerHTML = data;
     });
 </script>
-
-
-
-    <!-- Scroll To Top -->
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
-        </svg>
-    </div>
     <!--==============================
     All Js File
 ============================== -->
