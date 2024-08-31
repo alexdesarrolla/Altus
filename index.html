@@ -51,23 +51,23 @@
 <body class="theme-blue">
     <div id="header"></div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("#header").load("header.html", function() {
-            // Aquí puedes inicializar el menú después de cargar el header
-            $('.th-menu-toggle').on('click', function() {
-                $('.th-menu-wrapper').toggleClass('active');
-            });
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+                // Aquí puedes inicializar el menú después de cargar el header
+                $('.th-menu-toggle').on('click', function () {
+                    $('.th-menu-wrapper').toggleClass('active');
+                });
 
-            $(document).on('click', function(event) {
-                if (!$(event.target).closest('.th-menu-wrapper, .th-menu-toggle').length) {
-                    $('.th-menu-wrapper').removeClass('active');
-                }
+                $(document).on('click', function (event) {
+                    if (!$(event.target).closest('.th-menu-wrapper, .th-menu-toggle').length) {
+                        $('.th-menu-wrapper').removeClass('active');
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
     <!--==============================
 Hero Area
@@ -90,8 +90,8 @@ Hero Area
                         <div class="btn-group" data-ani="slideinup" data-ani-delay="0.5s">
                             <a href="contactenos.html" class="th-btn style3">Obtén una cotización aquí<i
                                     class="fas fa-long-arrow-right ms-2"></i></a>
-                            <a href="https://api.whatsapp.com/send/?phone=18008158016" class="th-btn style6">Hablar con un asesor<i
-                                    class="fas fa-long-arrow-right ms-2"></i></a>
+                            <a href="https://api.whatsapp.com/send/?phone=18008158016" class="th-btn style6">Hablar con
+                                un asesor<i class="fas fa-long-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -111,8 +111,8 @@ Hero Area
                         <div class="btn-group" data-ani="slideinup" data-ani-delay="0.5s">
                             <a href="contactenos.html" class="th-btn style3">Obtén una cotización aquí<i
                                     class="fas fa-long-arrow-right ms-2"></i></a>
-                            <a href="https://api.whatsapp.com/send/?phone=18008158016" class="th-btn style6">Hablar con un asesor<i
-                                    class="fas fa-long-arrow-right ms-2"></i></a>
+                            <a href="https://api.whatsapp.com/send/?phone=18008158016" class="th-btn style6">Hablar con
+                                un asesor<i class="fas fa-long-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -231,7 +231,8 @@ About Area
                                     <li><i class="fa fa-check-circle"></i> Equipo de expertos.</li>
                                 </ul>
                             </div>
-                            <a href="https://api.whatsapp.com/send/?phone=18008158016" class="th-btn">Obtén una cotización aquí<i class="fas fa-arrow-right ms-2"></i></a>
+                            <a href="https://api.whatsapp.com/send/?phone=18008158016" class="th-btn">Obtén una
+                                cotización aquí<i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -263,7 +264,8 @@ Servce Area
                             <h3 class="service-box_title h4"><a href="obamacare.html">Obama Care</a></h3>
                             <p class="service-box_text">Accede a cobertura de salud asequible con opciones adaptadas a
                                 tus necesidades.</p>
-                            <a class="icon-btn-with-text" href="obamacare.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="obamacare.html"><i
+                                    class="fa-regular fa-arrow-right"></i> <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -280,7 +282,8 @@ Servce Area
                             <h3 class="service-box_title h4"><a href="seguro-de-vida.html">Seguro de Vida</a></h3>
                             <p class="service-box_text">Protege a tus seres queridos asegurando su bienestar financiero
                                 en cualquier circunstancia.</p>
-                            <a class="icon-btn-with-text" href="seguro-de-vida.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="seguro-de-vida.html"><i
+                                    class="fa-regular fa-arrow-right"></i> <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -297,7 +300,8 @@ Servce Area
                             <h3 class="service-box_title h4"><a href="medicare.html">Medicare</a></h3>
                             <p class="service-box_text">Plan de salud para mayores de 65 años y personas con ciertas
                                 discapacidades.</p>
-                            <a class="icon-btn-with-text" href="medicare.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="medicare.html"><i class="fa-regular fa-arrow-right"></i>
+                                <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -314,7 +318,8 @@ Servce Area
                             <h3 class="service-box_title h4"><a href="seguros-privados.html">Seguros Privados</a></h3>
                             <p class="service-box_text">Personaliza tu cobertura de salud con opciones exclusivas para
                                 ti y tu familia.</p>
-                            <a class="icon-btn-with-text" href="seguros-privados.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="seguros-privados.html"><i
+                                    class="fa-regular fa-arrow-right"></i> <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -328,10 +333,12 @@ Servce Area
                             </div>
                         </div>
                         <div class="service-box_content">
-                            <h3 class="service-box_title h4"><a href="seguros-comerciales.html">Seguros Comerciales</a></h3>
+                            <h3 class="service-box_title h4"><a href="seguros-comerciales.html">Seguros Comerciales</a>
+                            </h3>
                             <p class="service-box_text">Completa tu protección con seguros que cubren gastos adicionales
                                 no contemplados.</p>
-                            <a class="icon-btn-with-text" href="seguros-comerciales.html"><i class="fa-regular fa-arrow-right"></i> <span>Ver
+                            <a class="icon-btn-with-text" href="seguros-comerciales.html"><i
+                                    class="fa-regular fa-arrow-right"></i> <span>Ver
                                     más </span></a>
                         </div>
                     </div>
@@ -347,16 +354,17 @@ Cta Area
             <div class=" text-center">
                 <h2 class="mb-3 cta-title h3 text-white">¡Descarga nuestra App Móvil!</h2>
                 <p class="mb-4 text-white"">Disponible ahora en Google Play y en el App Store.</p>
-                <div class="d-flex justify-content-center">
-                    <a href="https://play.google.com/store/apps/details?id=mnm.altusaslv2.app&pcampaignid=web_share" target="_blank" class="me-3">
+                <div class=" d-flex justify-content-center">
+                    <a href="https://play.google.com/store/apps/details?id=mnm.altusaslv2.app&pcampaignid=web_share"
+                        target="_blank" class="me-3">
                         <img src="assets/img/normal/google-play.webp" alt="Google Play" class="store-button">
                     </a>
                     <a href="">
                         <img src="assets/img/normal/apple-store.webp" alt="App Store" class="store-button">
                     </a>
-                </div>
             </div>
         </div>
+    </div>
     </div>
     <!--==============================
 Brand Area  
@@ -371,42 +379,147 @@ Brand Area
                 data-sm-slide-show="3" data-xs-slide-show="2">
                 <div class="col-auto">
                     <div class="brand-box">
-                        <img src="assets/img/brand/ambetter.webp" alt="Brand Logo">
+                        <img src="assets/img/alianzas/image1.png" alt="Brand Logo">
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="brand-box">
-                        <img src="assets/img/brand/obama-care.webp" alt="Brand Logo">
+                        <img src="assets/img/alianzas/image2.png" alt="Brand Logo">
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="brand-box">
-                        <img src="assets/img/brand/oscar.webp" alt="Brand Logo">
+                        <img src="assets/img/alianzas/image3.png" alt="Brand Logo">
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="brand-box">
-                        <img src="assets/img/brand/united-healthcare.webp" alt="Brand Logo">
+                        <img src="assets/img/alianzas/image4.png" alt="Brand Logo">
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="brand-box">
-                        <img src="assets/img/brand/sun-health.webp" alt="Brand Logo">
+                        <img src="assets/img/alianzas/image5.png" alt="Brand Logo">
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="brand-box">
-                        <img src="assets/img/brand/molina.webp" alt="Brand Logo">
+                        <img src="assets/img/alianzas/image6.png" alt="Brand Logo">
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="brand-box">
-                        <img src="assets/img/brand/cigna.webp" alt="Brand Logo">
+                        <img src="assets/img/alianzas/image7.png" alt="Brand Logo">
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="brand-box">
-                        <img src="assets/img/brand/blue-cross.webp" alt="Brand Logo">
+                        <img src="assets/img/alianzas/image8.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image9.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image10.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image11.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image12.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image13.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image14.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image15.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image16.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image17.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image18.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image19.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image20.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image21.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image22.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image23.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image24.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image25.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image26.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image27.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image28.png" alt="Brand Logo">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="brand-box">
+                        <img src="assets/img/alianzas/image29.png" alt="Brand Logo">
                     </div>
                 </div>
             </div>

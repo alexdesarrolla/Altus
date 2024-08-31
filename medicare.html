@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="ES">
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +11,6 @@
     <meta name="keywords"
         content="Medicare, seguro de salud, personas mayores, discapacidades, inscripción Medicare, cobertura médica federal, Asistencia Latina">
     <meta name="robots" content="INDEX,FOLLOW">
-
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,28 +50,28 @@
 <body>
     <div id="header"></div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("#header").load("header.html", function() {
-            // Aquí puedes inicializar el menú después de cargar el header
-            $('.th-menu-toggle').on('click', function() {
-                $('.th-menu-wrapper').toggleClass('active');
-            });
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("header.html", function () {
+                // Aquí puedes inicializar el menú después de cargar el header
+                $('.th-menu-toggle').on('click', function () {
+                    $('.th-menu-wrapper').toggleClass('active');
+                });
 
-            $(document).on('click', function(event) {
-                if (!$(event.target).closest('.th-menu-wrapper, .th-menu-toggle').length) {
-                    $('.th-menu-wrapper').removeClass('active');
-                }
+                $(document).on('click', function (event) {
+                    if (!$(event.target).closest('.th-menu-wrapper, .th-menu-toggle').length) {
+                        $('.th-menu-wrapper').removeClass('active');
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
     <!--==============================
     Breadcumb
 ============================== -->
-    <div class="breadcumb-wrapper "
-        data-bg-src="assets/img/breadcumb/banner-obamacare.webp" data-overlay="black" data-opacity="8">
+    <div class="breadcumb-wrapper" data-bg-src="assets/img/breadcumb/banner-obamacare.webp" data-overlay="black"
+        data-opacity="8">
         <div class="container">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Medicare</h1>
@@ -152,7 +151,8 @@
                             <h4 class="widget_title">¿Necesitas Ayuda?<br>Descarga nuestra App Móvil</h4>
                             <div class="widget-banner">
                                 <p class="banner-text">Disponible en cualquier momento</p>
-                                <a href="https://play.google.com/store/apps/details?id=mnm.altusaslv2.app&pcampaignid=web_share" target="_blank">
+                                <a href="https://play.google.com/store/apps/details?id=mnm.altusaslv2.app&pcampaignid=web_share"
+                                    target="_blank">
                                     <img src="assets/img/normal/google-play.webp" alt="Descargar en Google Play"
                                         style="margin-top: 15px;">
                                 </a>

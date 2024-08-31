@@ -8089,7 +8089,7 @@ ol.wp-block-rss {
 /* Extra small devices */
 @media (max-width: 575px) {
   .breadcumb-title {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 
@@ -20153,4 +20153,19 @@ span.select2-selection.select2-selection--single:focus {
 
 .whatsapp-icon {
   margin-top:13px;
+}
+/* Forzar el modal a estar siempre por encima */
+.modal {
+  z-index: 1060; /* Mayor que el z-index típico de un header o navbar */
+}
+
+/* Centrar verticalmente el modal */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  min-height: 100vh; /* Asegura que ocupe el 100% del alto de la ventana */
+}
+
+.modal-content {
+  margin: auto; /* Centrar el contenido */
 }
