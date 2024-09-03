@@ -20191,3 +20191,10 @@ span.select2-selection.select2-selection--single:focus {
   color: white; /* Color del texto */
   margin: 0; /* Eliminar margen por defecto */
 }
+.spanfont{
+  font-weight: 600;
+  font-size: 1.3em;
+}
+.consenttext{
+  font-size: 0.8em;
+}
