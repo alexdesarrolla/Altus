@@ -20182,3 +20182,13 @@ span.select2-selection.select2-selection--single:focus {
   line-height: 1;
   margin-bottom: 5px;
 }
+.container-fluid {
+  background: #c30003 !important; /* Color de fondo */
+  border-bottom: 2px solid #007bff; /* Línea inferior para destacar el banner */
+}
+
+.banner-text {
+  font-size: 18px; /* Tamaño de fuente */
+  color: white; /* Color del texto */
+  margin: 0; /* Eliminar margen por defecto */
+}
