@@ -90,9 +90,10 @@ Header Area
                 <div class="row justify-content-center justify-content-md-between align-items-center gy-2">
                     <div class="col-12 text-center">
                         <div class="header-links">
-                            <ul class="list-unstyled">
-                                <li class="d-md-none">
-                                    <div class="header-social hsv2">
+                            <!-- UL que se muestra solo en pantallas de escritorio (PC) -->
+                            <ul class="list-unstyled d-none d-md-block">
+                                <li>
+                                    <div class="header-social text-center">
                                         <span class="social-title">Síguenos:</span>
                                         <a href="https://www.facebook.com/ASISTENCIALATINAEU" target="_blank"><i class="fab fa-facebook-f"></i></a>
                                         <a href="https://www.instagram.com/altus.asistencialatina/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -100,7 +101,32 @@ Header Area
                                         <a href="https://t.me/Altushealth" target="_blank"><i class="fa-brands fa-telegram"></i></a>
                                     </div>
                                 </li>
-                                <li class=" d-md-inline-block">
+                                <li>
+                                    <div class="header-social text-center">
+                                        <span class="social-title">Llámanos:</span>
+                                        <a href="tel:+18008158016">+1 800-815-8016</a><a> | </a><a href="tel:+18332060777">+1 833-206-0777</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="far fa-location-dot"></i>6900 Tavistock Lakes Blvd Lake Nona Region - 32827
+                                </li>
+                                <li>
+                                    <i class="far fa-envelope"></i><a href="mailto:Contact@insurancealtus.com">Contact@insurancealtus.com</a>
+                                </li>
+                            </ul>
+                        
+                            <!-- UL que se muestra solo en pantallas móviles -->
+                            <ul class="list-unstyled d-md-none">
+                                <li>
+                                    <div class="header-social hsv2 text-center">
+                                        <span class="social-title">Síguenos:</span>
+                                        <a href="https://www.facebook.com/ASISTENCIALATINAEU" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/altus.asistencialatina/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="https://x.com/latinausa_a" target="_blank"><i class="fa-brands fa-x"></i></a>
+                                        <a href="https://t.me/Altushealth" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+                                    </div>
+                                </li>
+                                <li>
                                     <div class="header-social text-center">
                                         <span class="social-title">Llámanos:</span>
                                         <a href="tel:+18008158016">+1 800-815-8016</a><a> | </a><a href="tel:+18332060777">+1 833-206-0777</a>
@@ -108,6 +134,7 @@ Header Area
                                 </li>
                             </ul>
                         </div>
+                        
                     </div>
                     
                 </div>
