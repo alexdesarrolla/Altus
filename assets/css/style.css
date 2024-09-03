@@ -109,7 +109,7 @@ Version: 1.0.0
   --section-space: 120px;
   --section-space-mobile: 80px;
   --section-title-space: 60px;
-  --ripple-ani-duration: 5s;
+  --ripple-ani-duration: 3s;
 }
 
 /*------------------- 1.5. Typography -------------------*/
@@ -20198,3 +20198,10 @@ span.select2-selection.select2-selection--single:focus {
 .consenttext{
   font-size: 0.8em;
 }
+.text-decoration{
+  border-bottom: 1px white solid;
+}
+.text-decoration2{
+  border-bottom: 1px red;
+}
+
