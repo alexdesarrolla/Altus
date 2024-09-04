@@ -19020,6 +19020,10 @@ span.select2-selection.select2-selection--single:focus {
   .portfolio-filter-btn {
     display: inline-block;
   }
+  .textamañof{
+    line-height: 15px;
+    font-size: 13px;
+  }
 }
 
 /* Extra small devices */
@@ -20204,4 +20208,35 @@ span.select2-selection.select2-selection--single:focus {
 .text-decoration2{
   border-bottom: 1px red;
 }
+/* General link color */
+.consenttext, .consenttext2 {
+  color: #050f2d; /* Change this color code if you want a different shade of blue */
+  text-decoration: none; /* Remove underline from links */
+}
 
+/* Optional: Change color on hover */
+.consenttext:hover, .consenttext2:hover {
+  text-decoration: none; /* Add underline on hover for better accessibility */
+}
+
+/* Style for checkbox group to ensure proper spacing and alignment */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Adjust space between checkbox and label text */
+  margin-bottom: 10px; /* Adjust space between checkbox groups */
+}
+
+/* Ensuring the text is justified if needed */
+.text-justify {
+  text-align: justify;
+}
+.mtcheck{
+  margin-top: -15px;
+}
+.inerlinetx{
+  line-height: 14px;
+}
+.tx-blanco{
+  line-height: 15px;
+}

@@ -175,15 +175,25 @@ Contact Area
                             </div>
                             <div class="form-group col-12">
                                 <textarea name="message" id="message" cols="30" rows="3"
-                                    class="form-control style-white" placeholder="Tu mensaje" required></textarea>
+                                    class="form-control style-white" placeholder="Menasje Opcional" required></textarea>
                             </div>
                             <div class="form-group col-12">
                                 <input type="checkbox" id="smsAlerts" name="smsAlerts">
-                                <label for="smsAlerts" class="text-justify">Al proveer tu información, estás de acuerdo a ser contactado exclusivamente por un agente de seguros de ALTUS Asistencia Latina por llamada, texto y/o correo electrónico.</label>
+                                <label for="smsAlerts" class="text-justify consenttext inerlinetx">Al proveer mi información, estoy de acuerdo a ser contactado por un asesor o un agente de seguros de ALTUS por llamada telefonica, texto, Aplicación móvil y/o correo electrónico.</label>
                             </div>
                             <div class="form-group col-12">
-                                <input type="checkbox" id="smsAlerts2" name="smsAlerts2" required>
-                                <label for="smsAlerts2"><span class="spanfont">Acepto</span><br><a class="consenttext text-decoration2" href="terminos.html">Términos & Condiciones</a><a class="consenttext text-decoration2" href="privacidad.html"> & Consentimiento</a></label>
+                                <div class="checkbox-group mtcheck">
+                                    <input type="checkbox" id="smsAlerts2" name="smsAlerts2" required>
+                                    <label for="smsAlerts2">
+                                        <a class="consenttext text-decoration2" href="terminos.html" target="_blank">Términos & Condiciones</a>
+                                    </label>
+                                </div>
+                                <div class="checkbox-group mtcheck">
+                                    <input type="checkbox" id="smsAlerts3" name="smsAlerts3" required>
+                                    <label for="smsAlerts3">
+                                        <a class="consenttext text-decoration2" href="consentimiento.html" target="_blank">Consentimiento</a>
+                                    </label>
+                                </div>
                             </div>
                             <div class="form-btn col-12">
                                 <button class="th-btn" type="submit">Envíar <i class="fa fa-arrow-right"></i></button>
@@ -191,9 +201,6 @@ Contact Area
                         </div>
                         <p class="form-messages mb-0 mt-3"></p>
                     </form>
-
-
-
                 </div>
             </div>
         </div>
