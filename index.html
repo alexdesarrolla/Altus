@@ -31,6 +31,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MDBootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.css" rel="stylesheet">
 
     <!--==============================
 	    All CSS File
@@ -49,6 +52,59 @@
 </head>
 
 <body class="theme-blue">
+    <!-- Modal -->
+    <div class="modal fade" id="cookieconsent2" tabindex="-1" aria-labelledby="cookieconsentLabel2" aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-white">
+                    <h5 class="modal-title" id="cookieconsentLabel2">Cookies & Privacy</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-3 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-cookie-bite fa-4x text-primary"></i>
+                        </div>
+                        <div class="col-9">
+                            <p>Este sitio web utiliza cookies para que usted tenga la mejor experiencia en nuestro sitio web.<a class="d-block" href="terminos.html">Más información sobre las cookies</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="acceptCookiesBtn">
+                        Aceptar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- MDBootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
+    <!-- Font Awesome (for the cookie icon) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const modal = new mdb.Modal(document.getElementById('cookieconsent2'));
+            const acceptBtn = document.getElementById('acceptCookiesBtn');
+
+            // Check if the user has already accepted cookies
+            if (!localStorage.getItem('cookiesAccepted')) {
+                // Show the modal
+                modal.show();
+            }
+
+            // Handle the Accept button click
+            acceptBtn.addEventListener('click', function() {
+                // Store the user's acceptance in localStorage
+                localStorage.setItem('cookiesAccepted', 'true');
+                // Hide the modal
+                modal.hide();
+            });
+        });
+    </script>
     <div id="header"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -318,7 +374,7 @@ Servce Area
                 <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="service-box style3">
                         <div class="service-box_thumb">
-                            <img src="assets/img/service/comerciales.webp" alt="img">
+                            <img src="assets/img/service/aseguradoras.webp" alt="img">
                             <div class="service-box_icon">
                                 <img src="assets/img/icon/service_icon_6_5.svg" alt="Icon">
                             </div>

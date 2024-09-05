@@ -1907,6 +1907,29 @@ textarea.is-invalid {
   .icon-box .slick-arrow {
     margin-right: 0;
   }
+  .text-decoration{
+    font-size: 14px !important;
+  }
+  .footer-links ul {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido dentro del <ul> */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margin por defecto */
+    list-style-type: none; /* Elimina los puntos de la lista */
+}
+
+.footer-links li {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido dentro del <li> */
+    align-items: center; /* Opcional: centra verticalmente el contenido dentro del <li> */
+    width: 100%; /* Opcional: hace que el <li> ocupe todo el ancho disponible */
+}
+
+.footer-links a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    margin: 0 10px; /* Añade espacio entre los enlaces */
+}
+
 }
 
 .slick-3d-active {
@@ -19013,6 +19036,12 @@ span.select2-selection.select2-selection--single:focus {
   .project-slider-4 .slick-list {
     padding: 0 !important;
   }
+  span.social-title {
+    font-size: 12px !important;
+  }
+  .tx12{
+    font-size: 12px !important;
+  }
 }
 
 /* Small devices */
@@ -20239,4 +20268,24 @@ span.select2-selection.select2-selection--single:focus {
 }
 .tx-blanco{
   line-height: 15px;
+}
+.card-custom {
+  max-width: 500px;
+  margin: 50px auto; /* Centra el card verticalmente y horizontalmente */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn-paypal {
+  background-color: #003087;
+  color: #fff;
+}
+.btn-paypal:hover {
+  background-color: #002b69;
+}
+.btn-stripe {
+  background-color: #6772e5;
+  color: #fff;
+}
+.btn-stripe:hover {
+  background-color: #5469d4;
 }
