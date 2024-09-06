@@ -1173,6 +1173,10 @@ ul.wp-block-rss a {
   .gy-50 {
     --bs-gutter-y: 40px;
   }
+  .th-btn {
+    font-size: 12px !important;
+    padding: 12px 20px !important;
+}
 }
 
 /*------------------- 2.3. Input -------------------*/
@@ -1908,7 +1912,7 @@ textarea.is-invalid {
     margin-right: 0;
   }
   .text-decoration{
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
   .footer-links ul {
     display: flex;
@@ -17938,11 +17942,6 @@ span.select2-selection.select2-selection--single:focus {
   top: -8px;
 }
 
-.service-box_icon img {
-  -webkit-filter: brightness(999);
-          filter: brightness(999);
-}
-
 .service-box_title {
   margin-bottom: 10px;
 }
@@ -20295,3 +20294,8 @@ span.select2-selection.select2-selection--single:focus {
 .btn-stripe:hover {
   background-color: #5469d4;
 }
+.global-icon i {
+  color: white;
+  font-size: 2em; /* Tamaño de los íconos */
+}
+
