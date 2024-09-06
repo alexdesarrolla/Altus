@@ -5092,7 +5092,13 @@ ol.wp-block-rss {
 @media (min-width: 992px) {
   .sidebar-shop .widget {
     margin-bottom: 24px;
-  }
+  }#header > header > div.sticky-wrapper > div > div > div.container.container, .container-lg, .container-md, .container-sm {
+    max-width: 85% !important;
+}
+#header > header > div.sticky-wrapper > div > div > div.container > div > div:nth-child(1) > div > a > img
+{
+  max-width: 70% !important;
+}
 }
 
 /* Large devices */

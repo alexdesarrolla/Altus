@@ -52,56 +52,40 @@
 </head>
 
 <body class="theme-blue">
-    <!-- Modal -->
-    <div class="modal fade" id="cookieconsent2" tabindex="-1" aria-labelledby="cookieconsentLabel2" aria-hidden="true" data-mdb-backdrop="static" data-mdb-keyboard="false">
+    <!-- Modal de Cookies -->
+    <div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header text-white">
-                    <h5 class="modal-title" id="cookieconsentLabel2">Cookies & Privacy</h5>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cookieModalLabel">Acepta nuestras cookies</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-3 d-flex align-items-center justify-content-center">
-                            <i class="fas fa-cookie-bite fa-4x text-primary"></i>
-                        </div>
-                        <div class="col-9">
-                            <p>Este sitio web utiliza cookies para que usted tenga la mejor experiencia en nuestro sitio web.<a class="d-block" href="terminos.html">Más información sobre las cookies</a></p>
-                        </div>
-                    </div>
+                    <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas el uso de cookies.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" id="acceptCookiesBtn">
-                        Aceptar
-                    </button>
+                    <button type="button" class="btn btn-primary" id="acceptCookies">Aceptar</button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal -->
-
-    <!-- MDBootstrap JS and dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.0/mdb.min.js"></script>
-    <!-- Font Awesome (for the cookie icon) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-
-    <!-- Custom JavaScript -->
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const modal = new mdb.Modal(document.getElementById('cookieconsent2'));
-            const acceptBtn = document.getElementById('acceptCookiesBtn');
+        // Mostrar el modal automáticamente al cargar la página
+        document.addEventListener('DOMContentLoaded', function () {
+            var cookieModal = new bootstrap.Modal(document.getElementById('cookieModal'), {
+                backdrop: 'static',
+                keyboard: false
+            });
+            cookieModal.show();
 
-            // Check if the user has already accepted cookies
-            if (!localStorage.getItem('cookiesAccepted')) {
-                // Show the modal
-                modal.show();
-            }
-
-            // Handle the Accept button click
-            acceptBtn.addEventListener('click', function() {
-                // Store the user's acceptance in localStorage
-                localStorage.setItem('cookiesAccepted', 'true');
-                // Hide the modal
-                modal.hide();
+            // Manejar el clic en el botón "Aceptar"
+            document.getElementById('acceptCookies').addEventListener('click', function () {
+                // Aquí puedes almacenar la aceptación de cookies en una cookie o en localStorage
+                document.cookie = "cookiesAccepted=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+                cookieModal.hide();
             });
         });
     </script>
