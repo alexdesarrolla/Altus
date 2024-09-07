@@ -5096,7 +5096,8 @@ ol.wp-block-rss {
 @media (min-width: 992px) {
   .sidebar-shop .widget {
     margin-bottom: 24px;
-  }#header > header > div.sticky-wrapper > div > div > div.container.container, .container-lg, .container-md, .container-sm {
+  }
+  #header > header > div.sticky-wrapper > div > div > div.container.container, .container-lg, .container-md, .container-sm {
     max-width: 85% !important;
 }
 #header > header > div.sticky-wrapper > div > div > div.container > div > div:nth-child(1) > div > a > img
@@ -5142,6 +5143,9 @@ ol.wp-block-rss {
   .wp-block-tag-cloud a,
   .tagcloud a {
     padding: 10.5px 18px;
+  }
+  .mx-w65{
+    max-width: 65% !important;
   }
 }
 
