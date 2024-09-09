@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -52,43 +52,54 @@
 </head>
 
 <body class="theme-blue">
-    <!-- Modal de Cookies -->
-    <div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cookieModalLabel">Acepta nuestras cookies</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas el uso de cookies.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="acceptCookies">Aceptar</button>
-                </div>
+<!-- Modal de Cookies -->
+<div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cookieModalLabel">Acepta nuestras cookies</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar navegando, aceptas el uso de cookies.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="acceptCookies">Aceptar</button>
+                <button type="button" class="btn btn-secondary" id="rejectCookies">No aceptar</button>
             </div>
         </div>
     </div>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    <script>
-        // Mostrar el modal automáticamente al cargar la página
-        document.addEventListener('DOMContentLoaded', function () {
-            var cookieModal = new bootstrap.Modal(document.getElementById('cookieModal'), {
-                backdrop: 'static',
-                keyboard: false
-            });
-            cookieModal.show();
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Inicializar el modal manualmente
+    var cookieModalElement = document.getElementById('cookieModal');
+    var cookieModal = new bootstrap.Modal(cookieModalElement, {
+        backdrop: 'static',
+        keyboard: false
+    });
 
-            // Manejar el clic en el botón "Aceptar"
-            document.getElementById('acceptCookies').addEventListener('click', function () {
-                // Aquí puedes almacenar la aceptación de cookies en una cookie o en localStorage
-                document.cookie = "cookiesAccepted=true; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-                cookieModal.hide();
-            });
-        });
-    </script>
+    // Mostrar el modal solo si no se ha aceptado o rechazado previamente
+    if (!localStorage.getItem('cookiesAccepted')) {
+        cookieModal.show();
+    }
+
+    // Evento para aceptar cookies
+    document.getElementById('acceptCookies').addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieModal.hide();
+        alert('Has aceptado las cookies.');
+    });
+
+    // Evento para rechazar cookies
+    document.getElementById('rejectCookies').addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'false');
+        cookieModal.hide();
+        alert('Has rechazado las cookies.');
+    });
+});
+
+</script>
     <div id="header"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
