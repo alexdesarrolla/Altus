@@ -195,6 +195,7 @@ Contact Area
                                     </label>
                                 </div>
                             </div>
+                            <input type="hidden" id="userIp" name="userIp">
                             <div class="form-btn col-12">
                                 <button class="th-btn" type="submit">Envíar <i class="fa fa-arrow-right"></i></button>
                             </div>
@@ -211,7 +212,16 @@ Contact Area
             allowfullscreen="" loading="lazy"></iframe>
     </div>
     <div id="footer"></div>
-
+    <script>
+        // Obtener la IP usando el servicio ipify
+        fetch('https://api.ipify.org?format=json')
+          .then(response => response.json())
+          .then(data => {
+            // Asignar la IP obtenida al campo oculto
+            document.getElementById('userIp').value = data.ip;
+          })
+          .catch(error => console.error('Error al obtener la IP:', error));
+      </script>
     <script>
         fetch('footer.html')
             .then(response => response.text())
